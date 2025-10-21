@@ -1,0 +1,119 @@
+.text-booker {
+    font-weight: bold;
+    color:#4C271D ;
+    font-family: sans-serif;
+}
+.blackgrond-01{
+    background-color: #f7f2e9;
+}
+
+.italic-srirscha {
+    font-family: 'Srirscha', sans-serif; /* กำหนดฟอนต์ */
+    font-style: italic; /* ทำให้ตัวอักษรเป็นตัวเอียง */
+    font-weight: bold; /* ทำให้ข้อความเป็นตัวหนา */
+    color: #4C271D; /* กำหนดสีของข้อความ */
+}
+
+.text-color{
+    color: #4C271D;
+}
+
+.text-body{
+  font-family: 'Noto Sans Thai', sans-serif;
+}
+
+/* ตัวอย่างใช้ Playpen Sans Thai เฉพาะบางส่วน เช่น หัวข้อ */
+.playful-heading {
+  font-family: 'Playpen Sans', cursive;
+  font-weight: 400;
+   color: #4C271D;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 60px;
+  flex-wrap: wrap;
+}
+  
+.hero-text {
+  max-width: 450px;
+}
+.hero-text h1 {
+ font-size: 2rem;
+ line-height: 1.4;
+ margin-bottom: 20px;
+}
+
+
+/* Books */
+.hero-books {
+ display: flex;
+ gap: 20px;
+}
+
+.hero-books {
+  display: flex;
+  justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+  align-items: flex-end; /* ทำให้หนังสืออยู่ล่างสุด และสามารถปรับความสูงต่างกันได้ */
+  gap: 20px; /* ระยะห่างระหว่างหนังสือ */
+  margin: 40px 0;
+}
+
+.hero-books .book-left,
+.hero-books .book-right {
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ปรับความสูงของหนังสือซ้ายให้สูงกว่าเล็กน้อย */
+.hero-books .book-left {
+  transform: translateY(-80px); /* ขยับขึ้นด้านบน */
+}
+
+
+  .hero-books {
+    align-items: center;
+  }
+
+.book-right{
+  transform: translateY(40px);
+}
+
+.carousel-img {
+    max-height: 400px; /* ปรับขนาดความสูงที่ต้องการ */
+    width: auto;        /* ให้ความกว้างปรับตามอัตราส่วนภาพ */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.closing-section {
+  font-family: 'Playpen Sans', cursive;
+  background-color: #f7f2e9;
+  color: #4C271D;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.closing-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.closing-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
