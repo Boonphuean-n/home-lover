@@ -1,119 +1,163 @@
-.text-booker {
-    font-weight: bold;
-    color:#4C271D ;
-    font-family: sans-serif;
-}
-.blackgrond-01{
-    background-color: #f7f2e9;
+
+
+
+
+:root {
+  --brand-brown: #4C271D;
+  --bg-soft: #f7f2e9;
+  --accent: #6D9773;
 }
 
-.italic-srirscha {
-    font-family: 'Srirscha', sans-serif; /* กำหนดฟอนต์ */
-    font-style: italic; /* ทำให้ตัวอักษรเป็นตัวเอียง */
-    font-weight: bold; /* ทำให้ข้อความเป็นตัวหนา */
-    color: #4C271D; /* กำหนดสีของข้อความ */
-}
 
-.text-color{
-    color: #4C271D;
-}
-
-.text-body{
+body {
   font-family: 'Noto Sans Thai', sans-serif;
+  color: var(--brand-brown);
+  background-color: #fff;
+  margin: 0;
 }
 
-/* ตัวอย่างใช้ Playpen Sans Thai เฉพาะบางส่วน เช่น หัวข้อ */
+
+.text-booker {
+  font-family: 'Playpen Sans', cursive;
+  font-weight: 600;
+  color: var(--brand-brown);
+}
+
+
 .playful-heading {
   font-family: 'Playpen Sans', cursive;
-  font-weight: 400;
-   color: #4C271D;
-}
-
-/* Hero Section */
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 80px 60px;
-  flex-wrap: wrap;
-}
-  
-.hero-text {
-  max-width: 450px;
-}
-.hero-text h1 {
- font-size: 2rem;
- line-height: 1.4;
- margin-bottom: 20px;
+  color: var(--brand-brown);
 }
 
 
-/* Books */
-.hero-books {
- display: flex;
- gap: 20px;
-}
-
-.hero-books {
-  display: flex;
-  justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
-  align-items: flex-end; /* ทำให้หนังสืออยู่ล่างสุด และสามารถปรับความสูงต่างกันได้ */
-  gap: 20px; /* ระยะห่างระหว่างหนังสือ */
-  margin: 40px 0;
-}
-
-.hero-books .book-left,
-.hero-books .book-right {
-  width: 300px;
-  border-radius: 5px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* ปรับความสูงของหนังสือซ้ายให้สูงกว่าเล็กน้อย */
-.hero-books .book-left {
-  transform: translateY(-80px); /* ขยับขึ้นด้านบน */
+.text-color {
+  color: var(--brand-brown);
 }
 
 
-  .hero-books {
-    align-items: center;
-  }
-
-.book-right{
-  transform: translateY(40px);
+/* Hero */
+.bg-soft {
+  background-color: var(--bg-soft);
 }
 
-.carousel-img {
-    max-height: 400px; /* ปรับขนาดความสูงที่ต้องการ */
-    width: auto;        /* ให้ความกว้างปรับตามอัตราส่วนภาพ */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
-.closing-section {
-  font-family: 'Playpen Sans', cursive;
-  background-color: #f7f2e9;
-  color: #4C271D;
-  padding: 3rem 1.5rem;
-  text-align: center;
-}
-
-.closing-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.closing-section p {
-  font-size: 1.1rem;
+.hero h1 {
   line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto;
+  font-size: 1.8rem;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+  background-color: var(--bg-soft);
+}
+
+/* รูปภาพหนังสือทั้งสอง */
+.book-img {
+  width: 75%;
+  max-width: 260px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ทำให้ขนาดเท่ากันและตั้งค่าความสูง */
+.book-pair img {
+  object-fit: cover;
+}
+
+/* รูปซ้ายสูงกว่าเล็กน้อย */
+.book-left {
+  transform: translateY(-90px);
+}
+.book-right {
+  transform: translateY(50px);
+}
+
+/* เพิ่ม effect hover เล็กน้อย */
+.book-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0.8rem 1.2rem rgba(0,0,0,0.1);
+}
+
+/* ---------- Responsive ---------- */
+
+/* XS - หน้าจอมือถือ */
+@media (max-width: 575.98px) {
+  .book-pair {
+    flex-direction: column !important;
+  }
+
+  .book-img {
+    width: 85%;
+    max-width: 280px;
+  }
+
+  /* ยกเลิกความสูงต่างในมือถือ เพื่อให้สมดุล */
+  .book-left {
+    transform: none;
+  }
+
+  .hero-section {
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+  }
+}
+
+/* MD - แท็บเล็ต */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .book-img {
+    width: 60%;
+    max-width: 250px;
+  }
+
+  .book-left {
+    transform: translateY(-8px);
+  }
+
+  .hero-section h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* XL - Desktop */
+@media (min-width: 1200px) {
+  .book-img {
+    width: 45%;
+    max-width: 300px;
+  }
+
+  .book-left {
+    transform: translateY(-12px);
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
 }
 
 
 
+/* Responsive */
+@media (max-width: 767.98px) {
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+}
 
 
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 1.8rem;
+    text-align: left;
+  }
+}
 
 
+@media (min-width: 1200px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
